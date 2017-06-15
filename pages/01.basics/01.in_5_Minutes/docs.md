@@ -63,7 +63,7 @@ helloworld.html内容如下
     
     ##### 提交代码 #####
 
-    将第一步中的Dockerfile和helloworld.html提交到github或者bitbucket，并打tag. 假定项目名称为naturecloud-sample，打上tag 1.0。
+    将第一步中的Dockerfile和helloworld.html提交到github或者bitbucket，并打tag. 假定项目名称为nodejs-sample，分支有master，打上tag。
     
     ##### 创建构建 #####
     
@@ -71,27 +71,49 @@ helloworld.html内容如下
 
 	![](buildcreate.png)
 
+	点击创建后有两种获取代码的方式
+	1.首先是自动获取代码库
+
 	![](sourcebuild.png)
 
-	页面跳转到源码托管认证界面
+	![](selectbitbucket.png)
+
+	点击“获取代码列表”后会进入源码托管认证界面
 
 	![](oauth-login.png)
 
 	![](oauth-access.png)
 
-    点击“获取代码列表”
+    获取源码列表后选择“nodejs-sample”，点击确定后可创建构建
 
-	![](build-select.png)
+    ![](selectcode.png)
 
 	![](buildselect-1.png)
 
+	2.另一种方法是手动添加代码库
+
+	![](manalbuildcreate.png)
+
+	填写好需要的信息后，点击确定即可创建构建
+
     ##### 执行构建 #####
-    
+	自动获取代码库的构建和手动添加代码库的构建，执行构建时也有不同
+
 	![](buildstart.png)
 
+	1.自动获取代码库的构建
+    
 	![](buildstart-1.png)
 
+	2.手动添加代码库的构建
+	
+	![](manalbuildstart.png)
+
+	点击确定后构建开始
+
 	在构建列表里点击构建名称进入构建任务列表
+
+	![](gobuildhistory.png)
 
 	![](buildretlist.png)
 
@@ -102,6 +124,7 @@ helloworld.html内容如下
 	构建完成后可以在我的镜像中查看到之前构建的镜像
 
 	![](myImage.png)
+	![](myImage-1.png)
 	
     后面当有新的代码版本时，只需找执行相应版本的构建即可。
 
@@ -135,15 +158,17 @@ helloworld.html内容如下
 
 ### 第三步： 创建服务 ###
 
-进入容器服务页面，点击创建服务，选择之前上传的镜像nginx-image，然后点击部署	
+进入容器服务页面，点击创建服务，选择之前构建成功的镜像naturecloud-sample，然后点击部署	
 
 ![](servicecreate-selectimage.png)
 
 然后再服务创建信息页面填写相关参数
 
 ![](servicecreate-info.png)
+![](servicecreate-info1.png)
+![](servicecreate-info2.png)
 
-最后点击创建，服务列表里可以看到之前创建的服务
+最后点击添加创建，服务列表里可以看到之前创建的服务
 
 ![](servicelist.png)
 
@@ -159,8 +184,6 @@ helloworld.html内容如下
 
 **访问服务**
 
-![](serviceAccess.png)
-
 然后使用url，访问之前添加到helloworld.html
 
 ![](helloworld-test.png)
@@ -171,6 +194,8 @@ helloworld.html内容如下
 
 **登录服务**
 
+点击login后进入登录后界面
+
 ![](servicedetail-console.png)
 
 #### 版本更新 ####
@@ -178,6 +203,7 @@ helloworld.html内容如下
 在服务列表里面点击版本变更
 
 ![](serviceUpdate.png)
+![](serviceUpdate-1.png)
 
 #### 启动/停止服务 ####
 
@@ -188,6 +214,7 @@ helloworld.html内容如下
 通过伸缩扩容来增加/减少实例数目
 
 ![](servicescale.png)
+![](servicescale-1.png)
 
 #### 修改服务 ####
 
@@ -199,6 +226,7 @@ helloworld.html内容如下
 点击服务列表里的删除按钮
 
 ![](servicedelete.png)
+![](servicedelete-1.png)
 
 ### 温馨提示 ###
 

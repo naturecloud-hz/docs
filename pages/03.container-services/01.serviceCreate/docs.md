@@ -11,16 +11,18 @@ taxonomy:
 右侧会显示 创建过的服务列表，点击 创建服务按钮 进入服务创建页面，在服务创建页面中可以选择自己的镜像，也可以选择公有镜像。 （关于镜像的来源和具体介绍，请参考[镜像](/img)章节）
 
 ![](service_create.png)
+![](service_create2.png)
 
-再点击镜像上的部署按钮 部署应用
-
-![](service_create_select_image.png)
+直接点击镜像即可部署应用
 
 然后需要填写应用信息和相关参数
 
 ![](service_create_param.png)
+![](service_create_param1.png)
+![](service_create_param2.png)
 
 ![](service_param_spec_select.png)
+![](service_param_spec_select1.png)
 
 > 服务名 是用户帐户下应用的唯一标识
 > 
@@ -28,7 +30,7 @@ taxonomy:
 > 
 > 容量  是向平台请求服务运行资源 0.25C 代表cpu资源是250M ,128Mi代表内存资源是128m
 > 
-> 集群容量 是指启动的实例数量，可以做高可用，负载均衡。
+<!--> 集群容量 是指启动的实例数量，可以做高可用，负载均衡。-->
 >
 > 启动命令 服务的启动命令。可以为空，这样就采用镜像中指定的启动命令。
 > 
